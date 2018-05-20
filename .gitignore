@@ -1,0 +1,4 @@
+lib/db/kills.db
+src/__pycache__/
+src/out
+lib/pickled/old/

@@ -8,7 +8,7 @@ class zKillboard:
     Defines the api hook into zKillboard.
     '''
 
-    def __init__(self, api_endpoint='https://zkillboard.com/api/'):
+    def __init__(self, api_endpoint='https://zkillboard.com/api/', timeout_seconds=1):
         self.api = api_endpoint
         self.session = requests.session()
         self.headers = {
@@ -16,7 +16,7 @@ class zKillboard:
             'User-Agent' : 'rcooper@nmt.edu | coopss on github'
         }
         self.last_request = datetime.datetime.now()
-        self.request_timeout = datetime.timedelta(seconds=1)
+        self.request_timeout = datetime.timedelta(seconds=timeout_seconds)
 
     def get(self, endpoint):
         # prevent making too many requests to the server by waiting on a timeout

@@ -147,3 +147,21 @@ class KillboardDB:
 
         cursor.close()
         self.conn.commit()
+        return True
+
+    def get_solo_ship_kills(self):
+        cursor = self.conn.cursor()
+        result = cursor.execute('''
+            select kills.killmail_id, kills_victim.victim_ship_type_id, kills_attackers.attacker_ship_type_id
+            from kills
+            join kills_victim on kills.killmail_id = kills_victim.killmail_id
+            join kills_attackers on kills.killmail_id = kills_attackers.killmail_id
+            where kills.solo = 1
+            and kills_attackers.attacker_character_id not null
+            and kills_attackers.attacker_ship_type_id not null
+            and kills_victim.victim_ship_type_id not null''')
+        return result.fetchall()
+
+    # def execute(self, query, args=None):
+    #     cursor = self.conn.
+    #     result = self
