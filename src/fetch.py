@@ -31,9 +31,9 @@ if __name__ == '__main__':
         # ids.append(event['killmail_id'])
         # print(event['killmail_id'])
         # pprint(event)
-        exit()
+        # exit()
 
 
-    print(ids)
-    print(len(ids))
-    print([item for item, count in collections.Counter(ids).items() if count > 1])
+    # print(ids)
+    # print(len(ids))
+    # print([item for item, count in collections.Counter(ids).items() if count > 1])
