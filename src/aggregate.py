@@ -108,12 +108,11 @@ class Aggregator():
 if __name__ == '__main__':
     aggregate = Aggregator()
 
-
     class1 = ship_classes.FRIGATE
     class2 = ship_classes.FRIGATE
     # print('===== Frigate vs Frigate Win Rate =====')
     # kdList = aggregate.aggregate_wr(class1, class2)
-    kdList = aggregate.aggregate_wr(class1, ['593'])
+    kdList = aggregate.aggregate_wr(class1, ['33468'])
     # kdList = aggregate.aggregate_wr(ship_classes.FRIGATE_CLASS, None)
 
     for kill in kdList:
