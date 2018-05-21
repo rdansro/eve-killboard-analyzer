@@ -131,10 +131,14 @@ COMBAT_BATTLECRUISER = [
     ]
 
 COMBAT_RECON_SHIP = [
+        '11969', # Arazu
         '20125', # Curse
-        '11959', # Rook
+        '11957', # Falcon
+        '11961', # Huginn
         '11971', # Lachesis
-        '11961'  # Huginn
+        '11965', # Pilgrim
+        '11963', # Rapier
+        '11959', # Rook
     ]
 
 COMMAND_DESTROYER = [
@@ -454,13 +458,20 @@ JUMP_FREIGHTER = [
         '28846'  # Nomad
     ]
 
-LOGISTICS = [
+LOGISTICS_CRUISERS = [
         '11987', # Guardian
         '11985', # Basilisk
         '11989', # Oneiros
         '11978', # Scimitar
         '32790'  # Etana
 
+    ]
+
+LOGISTICS_FRIGATES = [
+        '37457', # Deacon
+        '37458', # Kirin
+        '37460', # Scalpel
+        '37459'  # Thalia
     ]
 
 MARAUDER = [
@@ -583,6 +594,8 @@ FLAG_CRUISER = [
         '45534' # Monitor
     ]
 
+# Defining what we consider to be in the frigate weight class
+FRIGATE_CLASS = FRIGATE + ASSAULT_FRIGATE + LOGISTICS_FRIGATES + COVERT_OPS + ELECTRONIC_ATTACK_SHIP
 
 if __name__ == '__main__':
     from typeid import TypeID
