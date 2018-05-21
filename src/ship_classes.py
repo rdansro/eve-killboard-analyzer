@@ -138,10 +138,10 @@ COMBAT_RECON_SHIP = [
     ]
 
 COMMAND_DESTROYER = [
-        # Pontifex
-        # Stork
-        # Magus
-        # Bifrost
+        '37481', # Pontifex
+        '37482', # Stork
+        '37483', # Magus
+        '37480'  # Bifrost
     ]
 
 COMMAND_SHIP = [
