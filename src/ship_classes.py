@@ -382,7 +382,9 @@ FRIGATE = [
         '33816', # Garmur
         '17924', # Succubus
         '17928', # Daredevil
-        '33468'  # Astero
+        '33468', # Astero
+        '17930'  # Worm
+
 
     ]
 
@@ -547,7 +549,8 @@ TITAN = [
         '3764', # Leviathan
         '671', # Erebus
         '23773', # Ragnarok
-        '45649' # Komodo
+        '45649', # Komodo
+        '42241' # Molok
 
     ]
 
@@ -601,6 +604,7 @@ if __name__ == '__main__':
     from typeid import TypeID
     typeid = TypeID(from_cache=True).get()
     typeid_inv = {v: k for k, v in typeid.items()}
+    # print(typeid_inv['Worm'] in FRIGATE_CLASS)
 
     while(True):
         a = input('')
